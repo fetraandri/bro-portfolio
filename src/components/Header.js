@@ -27,7 +27,7 @@ const Header = () => {
       y: top - menuOffset.y,
       width: width,
       height: height,
-      backgroundColor: '#00aced', // Choisissez une couleur
+      backgroundColor: '#00aced', 
       ease: 'elastic.out(.7, .7)',
       duration: .8,
     };

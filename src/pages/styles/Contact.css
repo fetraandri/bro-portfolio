@@ -42,12 +42,13 @@
 .contact-info {
   flex: 1; 
   padding: 2rem;
-  text-align: left; 
+  text-align:left; 
   min-width: 300px;
+  margin-top:5rem;
 }
 
 .contact-title {
-  font-size: 7em; 
+  font-size: 5em; 
   margin-bottom: 6rem;  
   color: #ffffff;
   
