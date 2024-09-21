@@ -1,0 +1,26 @@
+.portfolio-carousel {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .carousel-card {
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .carousel-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .carousel-image {
+    height: 400px;
+    object-fit: cover;
+    width: 100%;
+  }
+  
+  .card-body {
+    text-align: center;
+    background-color: #f8f9fa;
+  }
+  

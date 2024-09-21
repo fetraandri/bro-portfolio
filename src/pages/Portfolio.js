@@ -3,10 +3,11 @@ import { Row, Col } from 'react-bootstrap';
 import { ReactPhotoCollage } from "react-photo-collage";
 import 'bootstrap/dist/css/bootstrap.min.css'; 
 import './styles/Portfolio.css';  
+import PortfolioCarousel from '../components/PortfolioCarousel';
 
 const Portfolio = () => {
   const setting1 = {
-    width: "100%", // Ajuster la largeur pour qu'elle soit responsive
+    width: "100%", 
     height: ["250px", "170px"],
     layout: [1, 4],
     photos: [
@@ -74,6 +75,25 @@ const Portfolio = () => {
             <ReactPhotoCollage {...setting2} />
           </Col>
         </Row>
+
+          {/* Ton contenu existant pour les collages */}
+
+        {/* Texte avant le carrousel */}
+        <div className="mt-5 text-center">
+          <p className="mb-4">
+            Trois de mes activités ont été faites par notre groupe de travail  au Lycée Lecolibri Sabotsy Namehana …
+            Face painting… Presentation cours de dessin (Exposition) … et Exposition d’Oeuvre ….
+          </p>
+          <p className="mb-4">
+            Une journée pleinement positive pour la renaissance de C’ArtBON… Merci pour toutes les contributions à la réalisation de cet événement…
+            (Parents d’élèves… Directions LeColibri… Équipe C’ArtBON.. Surtout aux élèves du Colibri)..
+          </p>
+          <p className="mb-4">
+            #art #facepainting Commune Sabotsy Namehana #
+          </p>
+        </div>
+
+        <PortfolioCarousel />
       </div>
     </div>
   );
