@@ -150,4 +150,23 @@ body {
   }
   
   
+  .right-image {
+    perspective: 1000px;
+  }
+  
+  .animate-image {
+    transform-style: preserve-3d;
+    transition: transform 0.5s ease;
+  }
+  
+  .right-image:hover .animate-image {
+    transform: rotateY(10deg) rotateX(10deg);
+  }
+  
+  .right-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    animation: zoomIn 1s ease-in-out;
+  }
   

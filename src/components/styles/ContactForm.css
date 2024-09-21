@@ -1,43 +1,75 @@
 .contact-form-container {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 2rem;
-    background-color: rgba(249, 249, 249, 0.8);    border-radius: 10px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 4rem auto;
+  padding: 2rem;
+  background-color: rgba(255, 255, 255, 0.85); 
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2); 
+  backdrop-filter: blur(5px);
+  border-radius: 5%;
+  margin-top: 2rem;
+}
+
+.contact-form-container h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 26px; 
+  color: #333;
+  font-weight: bold;
+  letter-spacing: 1px; 
+}
+
+.form-group {
+  margin-bottom: 1.2rem; 
+  color: #444; 
+}
+
+.form-control {
+  width: 100%;
+  padding: 0.85rem; 
+  border: 1px solid #ccc; 
+  border-radius: 5px;
+  font-size: 16px; 
+  box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.05); 
+  transition: border 0.3s ease-in-out;
+}
+
+.form-control:focus {
+  border-color: #007bff; 
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); 
+}
+
+.btn-primary {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  cursor: pointer;
+  display: block;
+  margin: 1.5rem auto 0; 
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+  box-shadow: 0px 4px 10px rgba(0, 91, 179, 0.5); 
+}
+
+@media (max-width: 768px) {
+  .contact-form-container {
+      padding: 1.5rem; 
+      margin: 2rem auto;
   }
-  
-  h2 {
-    text-align: center;
-    margin-bottom: 1.5rem;
-    font-size: 24px;
-    color: #333;
+
+  .contact-form-container h2 {
+      font-size: 22px; 
   }
-  
-  .form-group {
-    margin-bottom: 1rem;
-    color: black;
-    
-  }
-  
-  .form-control {
-    width: 100%;
-    padding: 0.75rem;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-  }
-  
+
   .btn-primary {
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    padding: 0.75rem 1.5rem;
-    cursor: pointer;
-    display: block;
-    margin: 0 auto;
-    border-radius: 5px;
+      width: 100%; 
+      padding: 0.9rem;
   }
-  
-  .btn-primary:hover {
-    background-color: #0056b3;
-  }
-  
+}

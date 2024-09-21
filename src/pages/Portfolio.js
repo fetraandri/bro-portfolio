@@ -1,120 +1,36 @@
 import React from 'react';
-import { Card, Row, Col } from 'react-bootstrap';
-import { FaJs, FaReact, FaGithub, FaDocker } from 'react-icons/fa';
-import { SiSpringboot } from 'react-icons/si';
+import { Row, Col } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css'; 
-import './styles/Portfolio.css';
-import logoRandev from '../pages/styles/logo/logoRandev.png';
-import smartelia from '../pages/styles/logo/smartelia.png'
-
-// Compétences techniques
-const skills = [
-  {
-    title: 'JavaScript',
-    description: 'Langage de programmation essentiel pour moi, que j\'utilise pour créer des fonctionnalités interactives et dynamiques.',
-    icon: <FaJs size={40} color="#f7df1e" />
-  },
-  {
-    title: 'React',
-    description: (
-      <>
-        Des mini-projets tels que "To Do List" et d'autres applications comme "Sentiment Detector" développées avec Next.js. Voici le lien : 
-        <a href="https://github.com/SentimentDetector" target="_blank" rel="noopener noreferrer">Sentiment Detector</a>.
-      </>
-    ),
-    icon: <FaReact size={40} color="#61dafb" />
-  },
-  {
-    title: 'React Native',
-    description: (
-      <>
-        Création et maintenance de l'application mobile "Passion Campagne". Voici le lien du site :
-        <a href="https://www.passion-campagne.projets-omega.net/" target="_blank" rel="noopener noreferrer">Passion Campagne</a>.
-      </>
-    ),
-    icon: <FaReact size={40} color="#61dafb" />
-  },
-  {
-    title: 'Java Spring Boot',
-    description: (
-      <>
-        Développement d'un projet "Gestion Employée" en utilisant Spring Boot et Thymeleaf pour la vue. Lien du projet : 
-        <a href="https://github.com/fetraandri/appthymleaf" target="_blank" rel="noopener noreferrer">Gestion Employée</a>.
-      </>
-    ),
-    icon: <SiSpringboot size={40} color="#6DB33F" />
-  },
-  {
-    title: 'GitHub',
-    description: 'Plateforme que j’utilise pour la gestion de code source, essentielle pour collaborer avec des équipes de développement.',
-    icon: <FaGithub size={40} color="black" />
-  },
-  {
-    title: 'Docker',
-    description: 'Outil de conteneurisation que j’utilise pour déployer des applications de manière cohérente et portable à travers différents environnements.',
-    icon: <FaDocker size={40} color="#2496ed" />
-  }
-];
-
-// Expériences professionnelles
-const experiences = [
-  {
-    company: 'SMARTELIA',
-    logo: smartelia,
-    tasks: 'Ma première expérience au niveau de la socièté Smartelia est de collecter et faire de la saisie de données dans Google Sheets en utilisant Google Maps.'
-  },
-  {
-    company: 'R@NDEVTEAM',
-    logo: logoRandev,
-    tasks: 'STAGE : Mise à jour de l\'SDK de l\'application Android, maintenance du code de l\'application Android en React Native pendant 3 mois, et publication de l\'application sur playstore.  '
-  }
-];
-
+import './styles/Portfolio.css';  
 
 const Portfolio = () => {
   return (
     <div className="portfolio-background">
       <div className="container mt-5">
-        {/* Section Projets */}
-        <div className="skills-section">
-          <h1 className="text-center mb-4 portfolio-title">Projets</h1>
-          <Row>
-            {skills.map((skill, index) => (
-              <Col md={4} key={index} className="mb-4 fade-in" style={{ animationDelay: `${index * 0.2}s` }}>
-                <Card>
-                  <Card.Body className="text-center">
-                    <div className="icon mb-3">{skill.icon}</div>
-                    <Card.Title>{skill.title}</Card.Title>
-                    <Card.Text>{skill.description}</Card.Text>
-                  </Card.Body>
-                </Card>
-              </Col>
-            ))}
-          </Row>
-        </div>
+        <h1 className="text-center mb-5 portfolio-title">Mes projets et Réalisation</h1>
+        
+        <Row className="d-flex align-items-center">
+          <Col md={6} className="fade-in-left">
+            <div className="left-text">
+              <h2 className="text-animation">Peinture Murale</h2>
+              <p className="text-animation">Voilà l'espace de méditation de Yoga, une réalisation artistique que j'ai conçue pour "Gaïa", un centre de bien-être et de guérison.</p>
+              <p className="text-animation">Ce projet reflète une atmosphère de sérénité et de paix, un environnement propice à la relaxation et à la méditation. Mon intention était de capturer l'essence de la tranquillité à travers cette œuvre, en intégrant des éléments naturels et spirituels.</p>
+            </div>
+          </Col>
 
-        {/* Section Expériences */}
-        <div className="experiences-section">
-          <h2 className="text-center mt-5 mb-4 experience-title">Expériences</h2>
-          <Row>
-            {experiences.map((experience, index) => (
-              <Col md={6} key={index} className="mb-4 fade-in" style={{ animationDelay: `${index * 0.2}s` }}>
-                <Card className="experience-card">
-                  <Card.Img variant="top" src={experience.logo} alt={`${experience.company} logo`} />
-                  <Card.Body>
-                    <Card.Title>{experience.company}</Card.Title>
-                    <Card.Text>{experience.tasks}</Card.Text>
-                  </Card.Body>
-                </Card>
-              </Col>
-            ))}
-          </Row>
-        </div>
+          <Col md={6} className="fade-in-right">
+            <div className="right-image text-center">
+              <img 
+                src="https://scontent.ftnr4-2.fna.fbcdn.net/v/t39.30808-6/459796810_836751915238969_5128367523813861865_n.jpg?stp=dst-jpg_s720x720&_nc_cat=103&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeGhJzi2tJ7GPy3RuVNZ_x39ngG29EdzNYaeAbb0R3M1hiyRGpqrnVsu_KsIXuTH2ifpilX5mStHeu-PauhLxu1A&_nc_ohc=EkzbrSCkHQQQ7kNvgF_KNL4&_nc_zt=23&_nc_ht=scontent.ftnr4-2.fna&oh=00_AYAHBVVYU9LNyzD9p505KyC9S9o0Wm5GirYXBQKmUY048w&oe=66F47813" 
+                alt="Image de projet"
+                className="img-fluid animate-image"
+              />
+            </div>
+          </Col>
+        </Row>
       </div>
     </div>
   );
 };
-
-
 
 export default Portfolio;

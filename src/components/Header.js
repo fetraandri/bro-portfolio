@@ -6,7 +6,7 @@ import gsap from 'gsap';
 const items = [
   { name: "Accueil", href: "/" },
   { name: "À propos", href: "/about" },
-  { name: "Portfolio", href: "/portfolio" },
+  { name: "Réalisation", href: "/portfolio" },
   { name: "Contact", href: "/contact" },
 ];
 
@@ -46,8 +46,10 @@ const Header = () => {
   }, [active]);
 
   return (
+    <div className="main-content">
+
     <header className="header">
-      <h1>Krotana</h1>
+      <h1>Krotana Kely</h1>
       <div ref={$root} className="menu">
         {items.map((item, index) => (
           <Link
@@ -64,6 +66,8 @@ const Header = () => {
         <div ref={$indicator2} className="indicator" />
       </div>
     </header>
+    </div>
+
   );
 };
 
