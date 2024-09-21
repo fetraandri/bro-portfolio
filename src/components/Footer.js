@@ -38,7 +38,7 @@ const Footer = () => {
       </div>
 
       <div className="footer-bottom">
-        <p>&copy; 2024 Fetra Tanjona. Tous droits réservés.</p>
+        <p>&copy; 2024 Tahiry Fitiavana. Tous droits réservés.</p>
       </div>
     </footer>
   );
