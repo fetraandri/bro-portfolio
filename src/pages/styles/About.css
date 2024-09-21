@@ -149,19 +149,39 @@
     position: relative;
   }
   
-  .progress-bar {
-    height: 100%;
-    background:greenyellow;
-    border-radius: 4px;
-    transition: width 1s ease-in-out;
-  }
-  
-  .progress-value {
-    position: absolute;
-    top: -25px;
-    right: 10px;
-    font-size: 1rem;
+  .progress-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 10px;
     color: white;
-    font-weight: bold;
   }
   
+ 
+  .skill-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+  .skill {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+
+  }
+  .skill-item {
+    width: 100%; 
+    margin: 10px 0;
+  }
+  
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
