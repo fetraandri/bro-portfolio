@@ -1,0 +1,153 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .home-container {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden; 
+  }
+  
+  .main-content {
+    display: flex;
+    flex-grow: 1;
+    width: 100%;
+  }
+  
+  .image-container {
+    flex: 1; 
+    min-width: 300px;
+    perspective: 1000px; 
+
+  }
+  
+  .image-container img {
+    width: 100%;
+    height: auto;
+    max-height: 100vh; 
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.5s; 
+
+  }
+  .image-container:hover img {
+    transform: rotateY(10deg) rotateX(10deg); 
+    filter: brightness(1.1); 
+  }
+  
+  .text-content {
+    flex: 1; 
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .text-content h2 {
+    font-size: 60px;
+    margin: 0;
+    color: hsl(0, 0%, 28%);
+    font-weight: bold;
+    font-family: monospace;
+    letter-spacing: 7px;
+    text-transform: uppercase;
+    background: linear-gradient(to right, hsl(0, 0%, 30%) 0, hsl(0, 0%, 100%) 10%, hsl(0, 0%, 30%) 20%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shine 3s infinite linear;
+  }
+  
+  @keyframes shine {
+    0% {
+      background-position: 0;
+    }
+    60% {
+      background-position: 600px;
+    }
+    100% {
+      background-position: 600px;
+    }
+  }
+  
+  .text-content p {
+    margin: 20px 0;
+    font-size: 18px;
+    line-height: 1.5;
+  }
+  
+  .buttons {
+    margin-top: 20px; 
+  }
+  
+  .explore-btn, .video-btn {
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  .explore-btn {
+    background-color: rgb(126, 118, 118);
+    color: black;
+    border: none; 
+    padding: 10px 20px; 
+        
+  }
+  
+  
+
+
+  @media (max-width: 768px) {
+    .home-container {
+      flex-direction: column;
+    }
+  
+    .image-container {
+      width: 100%;
+      height: auto; 
+      max-height: 50vh; 
+      
+    }
+  
+    .text-content {
+      padding: 20px;
+      text-align: center;
+    }
+  
+    .text-content h2 {
+      font-size: 40px;
+    }
+  
+    .text-content p {
+      font-size: 16px; 
+    }
+  
+    .buttons {
+      flex-direction: column; 
+    }
+  
+    .explore-btn, .video-btn {
+      width: 100%; 
+      max-width: 200px; 
+
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .text-content h2 {
+      font-size: 30px; 
+    }
+  
+    .text-content p {
+      font-size: 14px; 
+    }
+    
+  }
+  
+  
+  
