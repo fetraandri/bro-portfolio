@@ -1,7 +1,7 @@
 const SitemapGenerator = require('sitemap-generator');
 const fs = require('fs');
 
-const baseUrl = 'https://my-portfolio-rust-eta-30.vercel.app/';
+const baseUrl = 'https://bro-portfolio.vercel.app/';
 
 const generator = SitemapGenerator(baseUrl, {
   stripQuerystring: true,
